@@ -1,0 +1,33 @@
+# ── Build output ──────────────────────────────────────────────────────────────
+node_modules/
+assets/css/bundle.css
+assets/js/bundle.js
+mix-manifest.json
+
+# ── Environment & secrets ─────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Database dumps ────────────────────────────────────────────────────────────
+*.sql
+*.sqlite
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# ── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editors ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── WordPress uploads (if ever added to theme by mistake) ─────────────────────
+uploads/
