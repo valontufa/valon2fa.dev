@@ -1,6 +1,14 @@
 <?php
 defined('ABSPATH') || exit;
 
+// Fallback so the theme doesn't fatal-error when ACF Pro isn't installed yet.
+if ( ! function_exists( 'get_field' ) ) {
+    function get_field( $selector, $post_id = false, $format_value = true ) { return false; }
+}
+if ( ! function_exists( 'update_field' ) ) {
+    function update_field( $selector, $value, $post_id = false ) { return false; }
+}
+
 require_once get_template_directory() . '/inc/admin-seed.php';
 
 // ─── Theme Setup ─────────────────────────────────────────────────────────────
