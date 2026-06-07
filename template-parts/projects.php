@@ -16,10 +16,13 @@ $projects = new WP_Query([
             <div class="projects-grid">
 
                 <?php while ($projects->have_posts()) : $projects->the_post();
-                    $live_url   = get_field('project_live_url');
-                    $github_url = get_field('project_github_url');
-                    $tagline    = get_field('project_tagline');
-                    $tech_stack = get_field('project_tech_stack');
+                    $live_url       = get_field('project_live_url');
+                    $github_url     = get_field('project_github_url');
+                    $github_label   = get_field('project_github_label');
+                    $github_url_2   = get_field('project_github_url_2');
+                    $github_label_2 = get_field('project_github_label_2');
+                    $tagline        = get_field('project_tagline');
+                    $tech_stack     = get_field('project_tech_stack');
                 ?>
                     <div class="project-card">
 
@@ -51,7 +54,11 @@ $projects = new WP_Query([
                                 <?php endif; ?>
 
                                 <?php if ($github_url) : ?>
-                                    <a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noopener" class="btn-github">GitHub</a>
+                                    <a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label ?: 'GitHub'); ?></a>
+                                <?php endif; ?>
+
+                                <?php if ($github_url_2) : ?>
+                                    <a href="<?php echo esc_url($github_url_2); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label_2 ?: 'GitHub'); ?></a>
                                 <?php endif; ?>
 
                             </div>

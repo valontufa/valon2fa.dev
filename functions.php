@@ -430,6 +430,24 @@ function valon2fa_register_acf_fields() {
                 'name'  => 'project_github_url',
                 'type'  => 'url',
             ],
+            [
+                'key'   => 'field_project_github_label',
+                'label' => 'GitHub Label',
+                'name'  => 'project_github_label',
+                'type'  => 'text',
+            ],
+            [
+                'key'   => 'field_project_github_url_2',
+                'label' => 'GitHub URL 2',
+                'name'  => 'project_github_url_2',
+                'type'  => 'url',
+            ],
+            [
+                'key'   => 'field_project_github_label_2',
+                'label' => 'GitHub Label 2',
+                'name'  => 'project_github_label_2',
+                'type'  => 'text',
+            ],
         ],
         'location' => [
             [
