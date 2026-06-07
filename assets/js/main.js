@@ -1,7 +1,3 @@
-import Alpine from 'alpinejs';
-window.Alpine = Alpine;
-Alpine.start();
-
 // ── Hero fade-in (IntersectionObserver) ──────────────────────────────────────
 
 const fadeObserver = new IntersectionObserver((entries) => {
