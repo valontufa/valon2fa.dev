@@ -53,12 +53,15 @@ $projects = new WP_Query([
                                     <span class="btn-demo btn-demo--disabled" aria-disabled="true">Live Demo</span>
                                 <?php endif; ?>
 
-                                <?php if ($github_url) : ?>
-                                    <a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label ?: 'GitHub'); ?></a>
-                                <?php endif; ?>
-
-                                <?php if ($github_url_2) : ?>
-                                    <a href="<?php echo esc_url($github_url_2); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label_2 ?: 'GitHub'); ?></a>
+                                <?php if ($github_url || $github_url_2) : ?>
+                                    <div class="github-links">
+                                        <?php if ($github_url) : ?>
+                                            <a href="<?php echo esc_url($github_url); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label ?: 'GitHub'); ?></a>
+                                        <?php endif; ?>
+                                        <?php if ($github_url_2) : ?>
+                                            <a href="<?php echo esc_url($github_url_2); ?>" target="_blank" rel="noopener" class="btn-github"><?php echo esc_html($github_label_2 ?: 'GitHub'); ?></a>
+                                        <?php endif; ?>
+                                    </div>
                                 <?php endif; ?>
 
                             </div>

@@ -490,7 +490,15 @@
 
   .project-links {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
+  }
+
+  .github-links {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .btn-demo {
